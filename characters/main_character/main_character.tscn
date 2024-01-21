@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dac7ndqd5dlfh"]
+
+[ext_resource type="Texture2D" uid="uid://dwelgq3hl1xy3" path="res://assets/kenney_scribble-platformer/PNG/Default/character_roundRed.png" id="1_51ao5"]
+[ext_resource type="Texture2D" uid="uid://dc3slyefpeu61" path="res://assets/kenney_scribble-platformer/PNG/Default/effect_blast.png" id="2_ko864"]
+
+[node name="MainCharacter" type="Node2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_51ao5")
+
+[node name="Colorizer" type="Node2D" parent="."]
+modulate = Color(0.377919, 0.377919, 0.377919, 1)
+
+[node name="Shadow" type="Sprite2D" parent="Colorizer"]
+z_index = -1
+position = Vector2(0, 23)
+texture = ExtResource("2_ko864")

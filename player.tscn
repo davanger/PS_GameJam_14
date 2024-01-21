@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbh1i4pmcyv5r"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_p0m42"]
+[ext_resource type="PackedScene" uid="uid://dac7ndqd5dlfh" path="res://characters/main_character/main_character.tscn" id="1_ulb5b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ttpg"]
+radius = 18.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_p0m42")
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_ulb5b")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 23)
+shape = SubResource("CircleShape2D_6ttpg")
